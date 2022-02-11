@@ -10,8 +10,7 @@ import {
     MeshStandardMaterial, 
     Vector3, 
     AmbientLight, 
-    AxesHelper,
-    GridHelper
+    AxesHelper
 } from "three";
 export class TEngine {
     private dom: HTMLElement;//挂载节点对象
@@ -41,14 +40,12 @@ export class TEngine {
         );
         const ambientLight: AmbientLight = new AmbientLight('rgb(255,255,255)', 1);// 创建环境光
         const axesHelper: AxesHelper = new AxesHelper(500);//创建三维轴
-        const gridHelper: GridHelper = new GridHelper(500,20,'rgb(200,200,200)','rgb(100,100,100)');//创建二维网格线
 
 
 
         this.scene.add(box);//场景放置物体
         this.scene.add(ambientLight);//场景设置环境光
-        this.scene.add(axesHelper);//场景设置三维轴
-        this.scene.add(gridHelper);//场景设置二维网格线
+        this.scene.add(axesHelper);//场景设置环境光
 
         // this.renderer.setClearColor('rgb(255,255,255)')
         // this.renderer.clearColor();

@@ -41,7 +41,7 @@ export class TEngine {
         );
         const ambientLight: AmbientLight = new AmbientLight('rgb(255,255,255)', 1);// 创建环境光
         const axesHelper: AxesHelper = new AxesHelper(500);//创建三维轴
-        const gridHelper: GridHelper = new GridHelper(500,20,'rgb(200,200,200)','rgb(100,100,100)');//创建二维网格线
+        const gridHelper: GridHelper = new GridHelper(500,10,'rgb(200,200,200)','rgb(100,100,100)');//创建二维网格线
 
 
 
