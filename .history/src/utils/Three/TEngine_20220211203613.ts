@@ -11,8 +11,7 @@ import {
     Vector3,
     AmbientLight,
     AxesHelper,
-    GridHelper,
-    MOUSE
+    GridHelper
 } from "three";
 import Stats from "three/examples/jsm/libs/stats.module"
 import { OrbitControls,MapControls } from "three/examples/jsm/controls/OrbitControls.js"
@@ -69,22 +68,15 @@ export class TEngine {
         //结束初始化性能监视器
 
         // 初始轨道控制器
-        const orbitControls: OrbitControls = new MapControls(this.camera,this.renderer.domElement);//使用MapControls 是因为这个才是创建的类，它继承了 OrbitControls
-        // orbitControls.autoRotate = true;//围绕目标旋转
-        orbitControls.enableDamping = true;//轨道阻尼器
-        orbitControls.mouseButtons = { // 设置鼠标控制方式
-            LEFT: null as unknown as MOUSE,//鼠标左键禁用
-            MIDDLE: MOUSE.DOLLY,//鼠标中键缩放相机
-            RIGHT: MOUSE.ROTATE,//鼠标右键旋转相机
-        }
+        const OrbitControls: OrbitControls = new MapControls(this.camera,this.renderer.domElement);//使用MapControls 是因为这个才是创建的类，它继承了 OrbitControls
+
 
 
         const renderFun = () => {
             // console.log('renderer anim')
             box.position.x += -0.01;
             box.rotation.y += 0.001;
-            // this.camera.position.x += -0.01;//控制相机位置
-            orbitControls.update();//更新控制器，先变化后渲染，所以放在渲染函数前
+            // this.camera.position.x += -0.01;
             this.renderer.render(this.scene, this.camera);
             stats.update();//设置监视器跟随帧率
             requestAnimationFrame(renderFun);//定时渲染视图

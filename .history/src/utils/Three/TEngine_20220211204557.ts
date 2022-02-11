@@ -72,10 +72,10 @@ export class TEngine {
         const orbitControls: OrbitControls = new MapControls(this.camera,this.renderer.domElement);//使用MapControls 是因为这个才是创建的类，它继承了 OrbitControls
         // orbitControls.autoRotate = true;//围绕目标旋转
         orbitControls.enableDamping = true;//轨道阻尼器
-        orbitControls.mouseButtons = { // 设置鼠标控制方式
-            LEFT: null as unknown as MOUSE,//鼠标左键禁用
-            MIDDLE: MOUSE.DOLLY,//鼠标中键缩放相机
-            RIGHT: MOUSE.ROTATE,//鼠标右键旋转相机
+        orbitControls.mouseButtons = {
+            LEFT: null as unknown as MOUSE,
+            MIDDLE: MOUSE.DOLLY,
+            RIGHT: MOUSE.ROTATE
         }
 
 
