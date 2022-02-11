@@ -7,12 +7,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, Ref, ref } from "vue";
-// import { WebGLRenderer } from "three";
+import { defineComponent, onMounted, ref } from "vue";
+import { WebGLRenderer } from "three";
 import { TEngine } from "./../utils/Three/TEngine";
 export default defineComponent({
   setup() {
-    const threeTarget :Ref<null>  = ref(null);
+    const threeTarget  = ref(null);
     onMounted(() => {
       const TE = new TEngine(threeTarget.value!);
     })
@@ -21,7 +21,7 @@ export default defineComponent({
     }
   },
   data:()=>({
-    // renderer: WebGLRenderer
+    renderer: WebGLRenderer
   })
 })
 </script>

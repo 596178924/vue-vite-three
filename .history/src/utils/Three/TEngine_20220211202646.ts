@@ -67,11 +67,11 @@ export class TEngine {
 
         const renderFun = () => {
             // console.log('renderer anim')
-            box.position.x += -0.01;
-            box.rotation.y += 0.001;
-            this.camera.position.x += -0.01;
+            box.position.x += 0.01;
+            box.position.y += 0.001;
+            this.camera.position.x += 0.01;
             this.renderer.render(this.scene, this.camera);
-            stats.update();//设置监视器跟随帧率
+            stats.update()
             requestAnimationFrame(renderFun);//定时渲染视图
         }
         renderFun();

@@ -60,18 +60,14 @@ export class TEngine {
         const stats =  Stats();
         const statsDom = stats.domElement;
         statsDom.style.position = 'fixed'
-        statsDom.style.top = '5px'
-        statsDom.style.right = '5px'
-        statsDom.style.left = 'unset'
+        statsDom.style.top = '0'
+        statsDom.style.right = '0'
         //结束初始化性能监视器
 
         const renderFun = () => {
             // console.log('renderer anim')
-            box.position.x += -0.01;
-            box.rotation.y += 0.001;
-            this.camera.position.x += -0.01;
+            // box.position.x += 0.01;
             this.renderer.render(this.scene, this.camera);
-            stats.update();//设置监视器跟随帧率
             requestAnimationFrame(renderFun);//定时渲染视图
         }
         renderFun();

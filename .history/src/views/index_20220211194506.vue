@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, Ref, ref } from "vue";
-// import { WebGLRenderer } from "three";
+import { WebGLRenderer } from "three";
 import { TEngine } from "./../utils/Three/TEngine";
 export default defineComponent({
   setup() {
@@ -21,7 +21,7 @@ export default defineComponent({
     }
   },
   data:()=>({
-    // renderer: WebGLRenderer
+    renderer: WebGLRenderer
   })
 })
 </script>

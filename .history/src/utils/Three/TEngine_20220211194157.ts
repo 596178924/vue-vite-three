@@ -13,8 +13,6 @@ import {
     AxesHelper,
     GridHelper
 } from "three";
-import Stats from "three/examples/jsm/libs/stats.module"
-
 export class TEngine {
     private dom: HTMLElement;//挂载节点对象
     private renderer: WebGLRenderer;//WebGL 的渲染函数
@@ -34,6 +32,7 @@ export class TEngine {
 
 
 
+        dom.appendChild(this.renderer.domElement);//将渲染函数载入dom下
         this.renderer.setSize(dom.offsetWidth, dom.offsetHeight, true);//设置渲染视图的大小
 
         const box: Mesh = new Mesh(
@@ -53,31 +52,14 @@ export class TEngine {
 
         // this.renderer.setClearColor('rgb(255,255,255)');
         // this.renderer.clearColor();
-
-        // this.renderer.render(this.scene, this.camera);//渲染视图
-
-        //初始化性能监视器
-        const stats =  Stats();
-        const statsDom = stats.domElement;
-        statsDom.style.position = 'fixed'
-        statsDom.style.top = '5px'
-        statsDom.style.right = '5px'
-        statsDom.style.left = 'unset'
-        //结束初始化性能监视器
-
+  
         const renderFun = () => {
             // console.log('renderer anim')
-            box.position.x += -0.01;
-            box.rotation.y += 0.001;
-            this.camera.position.x += -0.01;
+            // box.position.x += 0.01;
             this.renderer.render(this.scene, this.camera);
-            stats.update();//设置监视器跟随帧率
             requestAnimationFrame(renderFun);//定时渲染视图
         }
         renderFun();
-        dom.appendChild(this.renderer.domElement);//将渲染函数载入dom下
-        dom.appendChild(statsDom);//将渲染函数载入dom下
-
     }
     
 }
