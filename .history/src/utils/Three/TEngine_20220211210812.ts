@@ -29,7 +29,7 @@ export class TEngine {
         this.dom = dom;//获取dom节点
         // console.log(this.dom);
         this.renderer = new WebGLRenderer({
-            antialias: true,//抗锯齿处理
+            antialias: true
         });//实例化渲染函数
         this.scene = new Scene();//创建场景
         this.camera = new PerspectiveCamera(45, dom.offsetWidth / dom.offsetHeight, 1, 1000);//创建相机
