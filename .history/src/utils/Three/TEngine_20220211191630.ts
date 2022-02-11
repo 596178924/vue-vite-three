@@ -34,8 +34,8 @@ export class TEngine {
         this.renderer.setSize(dom.offsetWidth, dom.offsetHeight, true);//设置渲染视图的大小
 
         const box: Mesh = new Mesh(
-            new BoxBufferGeometry(10, 10, 10), //设置物体大小
-            new MeshStandardMaterial({color:"rgb(255,0,0)"}), //设置物体颜色
+            new BoxBufferGeometry(10, 10, 10),
+            new MeshStandardMaterial()
         );
         const ambientLight: AmbientLight = new AmbientLight('rgb(255,255,255)', 1);// 创建环境光
 
