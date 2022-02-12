@@ -51,22 +51,4 @@ import {
 export const BasicObjectList : Object3D[] = [];
 
 
-// 地面
-const stage : Mesh = new Mesh(
-    new BoxBufferGeometry(200, 10, 200),
-    new MeshStandardMaterial({color: 'rgb(150,150,150)'})
-)
-stage.position.y = -5;
 
-//立方体
-const box: Mesh = new Mesh(//正方体
-    new BoxBufferGeometry(20, 20, 20),
-    new MeshStandardMaterial({color: 'red'}),
-
-);
-box.position.y = 10;
-
-BasicObjectList.push(
-    stage,
-    box
-);

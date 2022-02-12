@@ -64,7 +64,7 @@ const box: Mesh = new Mesh(//正方体
     new MeshStandardMaterial({color: 'red'}),
 
 );
-box.position.y = 10;
+box.position.y = 10
 
 BasicObjectList.push(
     stage,

@@ -9,15 +9,13 @@
 import { defineComponent, onMounted, Ref, ref } from "vue";
 // import { WebGLRenderer } from "three";
 import { TEngine } from "./../utils/Three/TEngine";
-import { BasicObjectList } from "./../utils/Three/TBasicObject";
-import { LightsList } from "./../utils/Three/TLights"
+import { BasicObjectList } from "@/utils/Three/TBasicObject";
 // import { TCanvasTextureEditor }  from "@/utils/Three/TCanvasTextureEditor"
 export default defineComponent({
   setup() {
     const threeTarget: Ref<null> = ref(null);
     onMounted(() => {
       const TE = new TEngine(threeTarget.value!);
-      TE.addObject(...LightsList);
       TE.addObject(...BasicObjectList);
     })
     return {
