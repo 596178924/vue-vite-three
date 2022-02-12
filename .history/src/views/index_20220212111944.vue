@@ -18,14 +18,14 @@ export default defineComponent({
     onMounted(() => {
       const TE = new TEngine(threeTarget.value!);
       TE.addObject(...BasicObjectList);
-      // const testCanvas = new TCanvasTextureEditor();
-      // testCanvas.draw(ctx=> {
-      //   ctx.beginPath();
-      //   ctx.rect(10,10,200,200);
-      //   ctx.strokeStyle = 'red';
-      //   ctx.stroke();
-      //   ctx.closePath();
-      // }).preview();
+      const testCanvas = new TCanvasTextureEditor();
+      testCanvas.draw(ctx=> {
+        ctx.beginPath();
+        ctx.rect(10,10,200,200);
+        ctx.strokeStyle = 'red';
+        ctx.stroke();
+        ctx.closePath();
+      }).preview();
     })
     return {
       threeTarget

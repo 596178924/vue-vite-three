@@ -26,8 +26,8 @@ export const box: Mesh = new Mesh(//正方体
 box.position.x = -10;
 
 export const sphere: Line = new Line(//圆形
-    geometry,
-    material,
+    new SphereBufferGeometry(5),
+    new MeshStandardMaterial(),
 )
 sphere.position.x = 10;
 

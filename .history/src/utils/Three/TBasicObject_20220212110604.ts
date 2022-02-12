@@ -4,11 +4,8 @@ import {
     MeshStandardMaterial, 
     SphereBufferGeometry,
     CylinderBufferGeometry,
-    Object3D,
-    Line,
-    Points
+    Object3D
 } from "three";
-
 //Mesh 网格物体
 //new BoxBufferGeometry() //几何对象
 //new MeshStandardMaterial() //网格标准材质
@@ -16,18 +13,15 @@ import {
 
 export const BasicObjectList : Object3D[] = [];
 
-const material = new MeshStandardMaterial({color: 'blue'});
-const geometry = new BoxBufferGeometry(10, 10, 10);
-
 export const box: Mesh = new Mesh(//正方体
-    geometry, //设置物体大小
-    material, //设置物体颜色
+    new BoxBufferGeometry(10, 10, 10), //设置物体大小
+    new MeshStandardMaterial({ color: "rgb(255,0,0)" }), //设置物体颜色
 );
 box.position.x = -10;
 
-export const sphere: Line = new Line(//圆形
-    geometry,
-    material,
+export const sphere: Mesh = new Mesh(//圆形
+    new SphereBufferGeometry(5),
+    new MeshStandardMaterial(),
 )
 sphere.position.x = 10;
 

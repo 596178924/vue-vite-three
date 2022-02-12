@@ -9,8 +9,7 @@ import {
     AmbientLight,
     AxesHelper,
     GridHelper,
-    MOUSE,
-    Object3D
+    MOUSE
 } from "three";
 import Stats from "three/examples/jsm/libs/stats.module"
 import { OrbitControls,MapControls } from "three/examples/jsm/controls/OrbitControls.js"
@@ -33,7 +32,7 @@ export class TEngine {
         this.camera = new PerspectiveCamera(45, dom.offsetWidth / dom.offsetHeight, 1, 1000);//创建相机
         this.camera.position.set(20, 20, 20); //设置相机位置
         this.camera.lookAt(new Vector3(0, 0, 0));//设置相机视角
-        this.camera.up = new Vector3(0, 1, 0);//设置相机坐标
+        this.camera.up = new Vector3(0, 1, 0)
 
 
 
@@ -85,12 +84,6 @@ export class TEngine {
         dom.appendChild(this.renderer.domElement);//将渲染函数载入dom下
         dom.appendChild(statsDom);//将渲染函数载入dom下
 
-    }
-
-    addObject(...object: Object3D[]) { //添加物品到场景中
-        object.forEach(elem =>{
-            this.scene.add(elem)
-        })
     }
 
 }
