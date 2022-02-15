@@ -157,7 +157,7 @@ const uv: Float32Array = new Float32Array([ //构建顶点
 
 const geometry: BufferGeometry = new BufferGeometry();
 geometry.setAttribute('position', new BufferAttribute(points, 3));
-geometry.setAttribute('normal', new BufferAttribute(normals, 3));
+geometry.setAttribute('normal', new BufferAttribute(points, 3));
 geometry.setAttribute('uv', new BufferAttribute(uv, 2));
 geometry.setIndex(index);
 
