@@ -4,14 +4,13 @@ export const LightsList : Object3D[] = [];
 const ambientLight: AmbientLight = new AmbientLight('rgb(255,255,255)', 0.3);// 创建环境光
 
 export const pointLight : PointLight = new PointLight(
-    `rgb(255,255,255)`,
+    `rgb(255,255,225)`,
     0.7,
-    100,
+    50,
     0.1
 )
-pointLight.position.set(50,50,50)
+pointLight.position.set(20,20,20)
 // pointLight.position.set(100,100,100)
-pointLight.castShadow = true;//允许产生阴影
 
 export const spotLight: SpotLight = new SpotLight(
     'rgb(255,255,255',
@@ -27,7 +26,7 @@ spotLight.castShadow = true;//允许产生阴影
 
 
 LightsList.push(
-    spotLight,
+    spotLight
 
     pointLight,
 )

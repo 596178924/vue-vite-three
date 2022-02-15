@@ -6,7 +6,7 @@ const ambientLight: AmbientLight = new AmbientLight('rgb(255,255,255)', 0.3);// 
 export const pointLight : PointLight = new PointLight(
     `rgb(255,255,255)`,
     0.7,
-    100,
+    250,
     0.1
 )
 pointLight.position.set(50,50,50)

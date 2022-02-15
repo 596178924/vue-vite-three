@@ -6,11 +6,11 @@ const ambientLight: AmbientLight = new AmbientLight('rgb(255,255,255)', 0.3);// 
 export const pointLight : PointLight = new PointLight(
     `rgb(255,255,255)`,
     0.7,
-    100,
+    150,
     0.1
 )
-pointLight.position.set(50,50,50)
-// pointLight.position.set(100,100,100)
+// pointLight.position.set(50,50,50)
+pointLight.position.set(100,100,100)
 pointLight.castShadow = true;//允许产生阴影
 
 export const spotLight: SpotLight = new SpotLight(

@@ -8,11 +8,8 @@ import {
     Object3D,
     Line,
     Points,
-    PlaneBufferGeometry,
-    Color
+    PlaneBufferGeometry
 } from "three";
-
-import {VertexNormalsHelper} from 'three/examples/jsm/helpers/VertexNormalsHelper'
 
 //Mesh 网格物体
 //new BoxBufferGeometry() //几何对象
@@ -75,16 +72,12 @@ const box: Mesh = new Mesh(//正方体
         color: 'witch',
         // metalness: 1,// 金属 0-1
         // roughness:0.7,// 光滑度 0-1
-        // map: pictureTexture
     }),
 );
 box.position.y = 10;
-box.position.x = 25;
+box.position.x = 20;
 box.castShadow = true;//允许生成阴影
 box.receiveShadow = true;//允许生成阴影
-
-//构建法线
-const boxNormalHelper = new VertexNormalsHelper(box,10,new Color('deeppink').getHex());
 
 //相框
 const plane: Mesh = new Mesh(
@@ -99,8 +92,7 @@ plane.scale.set(0.5,0.5,0.5);
 
 
 BasicObjectList.push(
-    // stage,
+    stage,
     box,
-    plane,
-    boxNormalHelper,
+    plane
 );

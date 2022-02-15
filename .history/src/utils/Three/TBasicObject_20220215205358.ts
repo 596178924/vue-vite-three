@@ -79,7 +79,7 @@ const box: Mesh = new Mesh(//正方体
     }),
 );
 box.position.y = 10;
-box.position.x = 25;
+// box.position.x = 25;
 box.castShadow = true;//允许生成阴影
 box.receiveShadow = true;//允许生成阴影
 
