@@ -1,4 +1,3 @@
-import { pictureTexture } from './TTextures';
 import { 
     Mesh, 
     BoxBufferGeometry,  
@@ -78,16 +77,12 @@ box.position.y = 10;
 box.castShadow = true;//允许生成阴影
 box.receiveShadow = true;//允许生成阴影
 
-//相框
 const plane: Mesh = new Mesh(
-    new PlaneBufferGeometry(75,50),
-    new MeshStandardMaterial({
-        map: pictureTexture
-    })
+    new PlaneBufferGeometry(50,50),
+    new MeshStandardMaterial()
 )
-plane.position.y = 45;
-plane.position.x = 30;
-plane.scale.set(0.5,0.5,0.5);
+plane.position.y = 25;
+plane.scale.set(0.5,0.5,0.5)
 
 
 BasicObjectList.push(

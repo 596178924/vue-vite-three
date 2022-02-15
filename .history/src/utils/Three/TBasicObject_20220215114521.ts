@@ -86,7 +86,6 @@ const plane: Mesh = new Mesh(
     })
 )
 plane.position.y = 45;
-plane.position.x = 30;
 plane.scale.set(0.5,0.5,0.5);
 
 

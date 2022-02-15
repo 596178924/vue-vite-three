@@ -80,13 +80,12 @@ box.receiveShadow = true;//允许生成阴影
 
 //相框
 const plane: Mesh = new Mesh(
-    new PlaneBufferGeometry(75,50),
+    new PlaneBufferGeometry(50,75),
     new MeshStandardMaterial({
         map: pictureTexture
     })
 )
 plane.position.y = 45;
-plane.position.x = 30;
 plane.scale.set(0.5,0.5,0.5);
 
 
