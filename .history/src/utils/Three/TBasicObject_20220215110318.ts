@@ -54,10 +54,7 @@ export const BasicObjectList : Object3D[] = [];
 // 地面
 const stage : Mesh = new Mesh(
     new BoxBufferGeometry(200, 10, 200),
-    new MeshStandardMaterial({
-        color: 'rgb(0,75,75)',
-        roughness: 0
-    })
+    new MeshStandardMaterial({color: 'rgb(0,75,75)'})
 )
 stage.position.y = -5;
 stage.castShadow = true;//允许生成阴影
@@ -66,11 +63,8 @@ stage.receiveShadow = true;//允许生成阴影
 //立方体
 const box: Mesh = new Mesh(//正方体
     new BoxBufferGeometry(20, 20, 20),
-    new MeshStandardMaterial({
-        color: 'red',
-        metalness: 1,
-        roughness:0.3
-    }),
+    new MeshStandardMaterial({color: 'red'}),
+
 );
 box.position.y = 10;
 box.castShadow = true;//允许生成阴影

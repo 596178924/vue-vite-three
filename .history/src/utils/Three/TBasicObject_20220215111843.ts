@@ -68,8 +68,7 @@ const box: Mesh = new Mesh(//正方体
     new BoxBufferGeometry(20, 20, 20),
     new MeshStandardMaterial({
         color: 'red',
-        metalness: 1,
-        roughness:0.3
+        metalness: 0.5,
     }),
 );
 box.position.y = 10;
