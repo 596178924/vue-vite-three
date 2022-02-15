@@ -7,7 +7,7 @@ const pointLight : PointLight = new PointLight(
     `rgb(255,255,255)`,
     0.5,
     100,
-    0.5
+    0.1
 )
 pointLight.position.set(20,20,20)
 LightsList.push(
