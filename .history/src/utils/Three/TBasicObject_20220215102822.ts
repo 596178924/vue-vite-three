@@ -54,7 +54,7 @@ export const BasicObjectList : Object3D[] = [];
 // 地面
 const stage : Mesh = new Mesh(
     new BoxBufferGeometry(200, 10, 200),
-    new MeshStandardMaterial({color: 'rgb(150,200,120)'})
+    new MeshStandardMaterial({color: 'rgb(150,180,150)'})
 )
 stage.position.y = -5;
 

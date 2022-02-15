@@ -4,7 +4,7 @@ export const LightsList : Object3D[] = [];
 const ambientLight: AmbientLight = new AmbientLight('rgb(255,255,255)', 0.3);// 创建环境光
 
 export const pointLight : PointLight = new PointLight(
-    `rgb(255,0,0)`,
+    `rgb(255,255,255)`,
     0.7,
     100,
     0.1
