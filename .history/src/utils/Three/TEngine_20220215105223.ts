@@ -28,7 +28,7 @@ export class TEngine {
         this.renderer = new WebGLRenderer({
             antialias: true,//抗锯齿处理
         });//实例化渲染函数
-        this.renderer.shadowMap.enabled = true;//允许阴影的渲染
+        this.renderer.shadowMap.enabled = true;
 
 
         this.scene = new Scene();//创建场景

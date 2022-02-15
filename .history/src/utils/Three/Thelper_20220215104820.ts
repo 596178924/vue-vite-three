@@ -17,5 +17,5 @@ HelperList.push(
     axesHelper,
     gridHelper,
     pointLightHelper,
-    spotLightHelper,
+    spotLightHelper
 )

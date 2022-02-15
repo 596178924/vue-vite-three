@@ -57,7 +57,6 @@ const stage : Mesh = new Mesh(
     new MeshStandardMaterial({color: 'rgb(150,200,120)'})
 )
 stage.position.y = -5;
-stage.castShadow = true;//允许生成阴影
 stage.receiveShadow = true;//允许生成阴影
 
 //立方体
@@ -67,9 +66,7 @@ const box: Mesh = new Mesh(//正方体
 
 );
 box.position.y = 10;
-box.castShadow = true;//允许生成阴影
-box.receiveShadow = true;//允许生成阴影
-
+stage.castShadow = true;//允许生成阴影
 
 
 BasicObjectList.push(
